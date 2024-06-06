@@ -19,3 +19,29 @@
 | `HLOOKUP`              | Find a value in the first row of a table and get the matching value from another row       | [HLOOKUP](https://support.microsoft.com/en-au/office/hlookup-function-a3034eec-b719-4ba3-bb65-e1ad662ed95f) |
 | `MATCH`                | Find the position of a value in a specified range                                          | [MATCH](https://support.microsoft.com/en-us/office/match-function-e8dffd45-c762-47d6-bf89-533f4a37673a)     |
 | `INDEX`                | Return the value of a cell in a specified row and column of a range                        | [INDEX](https://support.microsoft.com/en-us/office/index-function-a5dcf0dd-996d-40a4-a822-b56b061328bd)     |
+
+## Specific usecase formulas
+Formulas for practical usecases in different scenarios / projects.
+
+### Scenario: Matching Values from Sheet2 to Sheet1
+In this example, we have two Excel sheets. Sheet1 contains numbers and names in columns A and B, respectively. Sheet2 contains the same values but arranged in columns C and D. We aim to match the names in Sheet2 with the numbers in Sheet1 using the INDEX and MATCH functions.
+
+**Sheet1:**
+| A (Number) | B (Name) |
+|------------|-----------|
+| 1          | AAA123    |
+| 2          | BBB456    |
+| 3          | CCC789    |
+
+**Sheet2:**
+| C (Number) | D (Name)  |
+|------------|-----------|
+| 1          | AAA123    |
+| 2          | BBB456    |
+| 3          | CCC789    |
+
+To match the names from Sheet2 with the numbers in Sheet1, we use the following formula:
+
+```
+=INDEX(Sheet2!D:D, MATCH(A1, Sheet2!C:C, 0))
+```
