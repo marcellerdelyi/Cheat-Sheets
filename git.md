@@ -47,3 +47,12 @@ A snapshot represents the state of something, a copy of a project at a specific 
 | -------------------------- | ------------------------------------------------------ |
 | `git log`                  | Lists the chronological history of commits             |
 | `git log --pretty=oneline` | Lists the chronological history of commits in one line |
+
+
+# The Perfect Commit Message
+
+1. Subject = concise summary of what happened
+2. Body = more detailed explanation
+- What is now different than before?
+- What's the reason for the change?
+- Is there anything to watch out for / anything particularly remarkable?
