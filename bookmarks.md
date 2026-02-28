@@ -1,4 +1,4 @@
-# Bokmarks
+# Bookmarks
 
 A list of websites that I want to keep for references and revisit.
 
